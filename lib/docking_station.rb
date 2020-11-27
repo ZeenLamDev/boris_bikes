@@ -10,7 +10,7 @@ class DockingStation
 
   def release_bike
     fail "No bikes available" if @bikes.length == 0
-    bike = Bike.new
+    @bikes.pop
   end
 
   def dock(bike)
@@ -18,5 +18,4 @@ class DockingStation
     @bikes << @bike
     @bike = bike
   end
-
 end
